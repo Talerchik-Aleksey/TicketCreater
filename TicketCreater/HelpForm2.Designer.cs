@@ -56,7 +56,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1000, 154);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Дальше вы сможете ознакомиться с основными особенностями работы с приложением";
+            this.label2.Text = "Для выбора операции нажмите на одну из следующих кнопок";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EventSystem
@@ -138,7 +138,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1000, 99);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Основные моменты работы с приложением";
+            this.label1.Text = "РАБОТА С ГЛАВНЫМ МЕНЮ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // Footer
@@ -156,7 +156,7 @@
             this.pictureBox1.Image = global::TicketCreater.Properties.Resources.image_2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 253);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 474);
+            this.pictureBox1.Size = new System.Drawing.Size(1000, 458);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;

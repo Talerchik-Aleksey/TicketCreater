@@ -73,7 +73,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1000, 99);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Основные моменты работы с приложением";
+            this.label1.Text = "ОСНОВНЫЕ МОМЕНТЫ РАБОТЫ С ПРИЛОЖЕНИЕМ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label2

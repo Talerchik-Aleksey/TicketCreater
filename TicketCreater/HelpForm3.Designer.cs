@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.EventSystem = new TicketCreater.EventUserComponent();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Dot1 = new System.Windows.Forms.PictureBox();
@@ -37,25 +36,16 @@
             this.NextButton = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Footer = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NextButton)).BeginInit();
             this.Footer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(0, 99);
-            this.label2.Margin = new System.Windows.Forms.Padding(20, 0, 100, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1000, 243);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Дальше вы сможете ознакомиться с основными особенностями работы с приложением";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EventSystem
             // 
@@ -79,6 +69,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 100);
             this.panel1.TabIndex = 14;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Dot1
             // 
@@ -136,7 +127,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1000, 99);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Основные моменты работы с приложением";
+            this.label1.Text = "РЕЗУЛЬТАТЫ ОПЕРАЦИЙ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // Footer
@@ -148,11 +139,35 @@
             this.Footer.Size = new System.Drawing.Size(1000, 73);
             this.Footer.TabIndex = 11;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::TicketCreater.Properties.Resources.image3;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 233);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1000, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(0, 99);
+            this.label2.Margin = new System.Windows.Forms.Padding(20, 0, 100, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1000, 134);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "При проведении операций вы можете получить \nспециальное уведомление";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // HelpForm3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 515);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -170,13 +185,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.NextButton)).EndInit();
             this.Footer.ResumeLayout(false);
             this.Footer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Label label2;
         private EventUserComponent EventSystem;
         private Panel panel1;
         private PictureBox Dot1;
@@ -185,5 +199,7 @@
         private PictureBox NextButton;
         private Label label1;
         private Panel Footer;
+        private PictureBox pictureBox1;
+        private Label label2;
     }
 }
