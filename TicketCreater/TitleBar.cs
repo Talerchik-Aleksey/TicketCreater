@@ -31,12 +31,12 @@ namespace TicketCreater
             if (CurrentForm.WindowState == 0)
             {
                 CurrentForm.WindowState = FormWindowState.Maximized;
-            } 
+            }
             else
             {
                 CurrentForm.WindowState = FormWindowState.Normal;
             }
-            
+
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -77,7 +77,8 @@ namespace TicketCreater
         private void TitleBar_Paint(object sender, PaintEventArgs e)
         {
             if (this.Controls.Find("ChromeBack", true).FirstOrDefault() != default) return;
-            if (Caption.Text == "Справка")
+
+            if (Caption.Text.StartsWith("Справка"))
             {
                 PictureBox ChromeBack = new PictureBox()
                 {
@@ -89,20 +90,39 @@ namespace TicketCreater
                     Size = new Size(48, 32),
                     Name = "ChromeBack",
                 };
+
                 ChromeBack.Click += ChromeBack_Click; ;
                 Controls.Add(ChromeBack);
-                Caption.Location = new Point(Caption.Location.X + 30, Caption.Location.Y) ;
+                Caption.Location = new Point(Caption.Location.X + 30, Caption.Location.Y);
             }
         }
 
         private void ChromeBack_Click(object? sender, EventArgs e)
         {
             var CurrentForm = Controls.Owner.FindForm();
-            var footers = CurrentForm.Controls.Find("Footer", true);
-            foreach(var elem in footers)
+
+            if (Caption.Text == "Справка 2") 
+            {
+                CurrentForm.Close();
+                HelpForm helpForm = new();
+                helpForm.Show();
+            }
+            else if (Caption.Text == "Справка 3")
+            {
+                CurrentForm.Close();
+                HelpForm2 helpForm2 = new();
+                helpForm2.Show();
+            }
+            else { ChromeBackError(CurrentForm); }
+        }
+
+        private void ChromeBackError(Form currentForm)
+        {
+            var footers = currentForm.Controls.Find("Footer", true);
+            foreach (var elem in footers)
             {
                 var elems = elem.Controls.Find("EventSystem", true);
-                foreach(var eventSystem in elems)
+                foreach (var eventSystem in elems)
                 {
                     models.EventSystem.Type = 0;
                     models.EventSystem.Name = "Ошибка";

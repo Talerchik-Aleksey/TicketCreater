@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TicketCreater
 {
-    public partial class HelpForm : Form
+    public partial class HelpForm2 : Form
     {
-        public HelpForm()
+        public HelpForm2()
         {
             InitializeComponent();
             TitleBar titleBar = new TitleBar()
@@ -47,20 +47,17 @@ namespace TicketCreater
             Dot3.Location = new Point((this.ClientSize.Width - Dot3.Size.Width) / 2 + 25, DotY);
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Dot1_Click(object sender, EventArgs e)
         {
             int formWindowState = (int)this.WindowState;
-            if (sender.Equals(Dot1)) { }
-            else if (sender.Equals(Dot2)) {
+            if (sender.Equals(Dot1)) {
                 this.Close();
-                HelpForm2 helpForm2 = new();
-                helpForm2.Show();
-                helpForm2.WindowState = (FormWindowState)formWindowState;
+                HelpForm helpForm = new();
+                helpForm.Show();
+                helpForm.WindowState = (FormWindowState)formWindowState;
+            }
+            else if (sender.Equals(Dot2))
+            {
             }
             else if (sender.Equals(Dot3))
             {
@@ -75,9 +72,9 @@ namespace TicketCreater
         {
             int formWindowState = (int)this.WindowState;
             this.Close();
-            HelpForm2 helpForm2 = new();
-            helpForm2.Show();
-            helpForm2.WindowState = (FormWindowState)formWindowState;
+            HelpForm3 helpForm3 = new();
+            helpForm3.Show();
+            helpForm3.WindowState = (FormWindowState)formWindowState;
         }
     }
 }
