@@ -183,6 +183,16 @@ namespace TicketCreater.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SaveButton {
+            get {
+                object obj = ResourceManager.GetObject("SaveButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SuccessIcon {
             get {
                 object obj = ResourceManager.GetObject("SuccessIcon", resourceCulture);
@@ -216,6 +226,26 @@ namespace TicketCreater.Properties {
         internal static System.Drawing.Bitmap TitleBarMax {
             get {
                 object obj = ResourceManager.GetObject("TitleBarMax", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToggleSwitchOff {
+            get {
+                object obj = ResourceManager.GetObject("ToggleSwitchOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToggleSwitchOn {
+            get {
+                object obj = ResourceManager.GetObject("ToggleSwitchOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

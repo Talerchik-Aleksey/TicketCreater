@@ -116,6 +116,10 @@ namespace TicketCreater
             else { ChromeBackError(CurrentForm); }
         }
 
+        /// <summary>
+        /// Error when form last
+        /// </summary>
+        /// <param name="currentForm">Form where component is</param>
         private void ChromeBackError(Form currentForm)
         {
             var footers = currentForm.Controls.Find("Footer", true);

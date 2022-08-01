@@ -121,8 +121,8 @@
   <data name="ButtonClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\HelpForm\ButtonClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="InformationIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\image\Footer\EventSystemIcons\InformationIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\HelpForm\Examples\image 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TitleBarMax" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\TitleBar\TitleBarMax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +130,8 @@
   <data name="TitleBarCollapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\TitleBar\TitleBarCollapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\image\HelpForm\ButtonNext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\HelpForm\unActive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\MainMenuButtons\Button-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,17 +139,20 @@
   <data name="SuccessIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\Footer\EventSystemIcons\SuccessIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ButtonNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\HelpForm\ButtonNext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BackTitleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\TitleBar\BackTitleButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToggleSwitchOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\Settings\ToggleSwitchOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CriticalIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\Footer\EventSystemIcons\CriticalIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\MainMenuButtons\Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Active" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\image\HelpForm\Active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HelpButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\Footer\HelpButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,16 +163,22 @@
   <data name="Button-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\MainMenuButtons\Button-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="unActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\image\HelpForm\unActive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ToggleSwitchOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\Settings\ToggleSwitchOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\HelpForm\Examples\image3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WarningIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\Footer\EventSystemIcons\WarningIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\image\HelpForm\Examples\image 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\HelpForm\Active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\image\HelpForm\Examples\image3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="InformationIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\Footer\EventSystemIcons\InformationIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\Settings\SaveButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

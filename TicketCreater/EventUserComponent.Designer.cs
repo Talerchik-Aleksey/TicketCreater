@@ -66,7 +66,7 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::TicketCreater.Properties.Resources.TitleBarClose;
-            this.pictureBox1.Location = new System.Drawing.Point(597, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(457, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -96,7 +96,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "EventUserComponent";
-            this.Size = new System.Drawing.Size(640, 48);
+            this.Size = new System.Drawing.Size(500, 48);
             this.VisibleChanged += new System.EventHandler(this.EventUserControl_VisibleChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.EventUserComponent_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
