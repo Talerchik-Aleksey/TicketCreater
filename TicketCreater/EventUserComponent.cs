@@ -51,5 +51,25 @@ namespace TicketCreater
         {
 
         }
+
+        public void CriticalEvent(string caption, string text)
+        {
+            this.Visible = false;
+            models.EventSystem.Type = 0;
+            models.EventSystem.Name = caption;
+            models.EventSystem.Description = text;
+            this.Visible = true;
+            this.UpdateStyles();
+        }
+
+        public void InfoEvent(string caption, string text)
+        {
+            this.Visible = false;
+            models.EventSystem.Type = 2;
+            models.EventSystem.Name = caption;
+            models.EventSystem.Description = text;
+            this.Visible = true;
+            this.UpdateStyles();
+        }
     }
 }

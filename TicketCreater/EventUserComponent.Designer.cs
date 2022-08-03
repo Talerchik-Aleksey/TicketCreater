@@ -39,8 +39,10 @@
             // Title
             // 
             this.Title.AutoSize = true;
+            this.Title.BackColor = System.Drawing.Color.Transparent;
             this.Title.Dock = System.Windows.Forms.DockStyle.Left;
             this.Title.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Title.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Title.Location = new System.Drawing.Point(43, 0);
             this.Title.Name = "Title";
             this.Title.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
@@ -77,8 +79,10 @@
             // Description
             // 
             this.Description.AutoSize = true;
+            this.Description.BackColor = System.Drawing.Color.Transparent;
             this.Description.Dock = System.Windows.Forms.DockStyle.Left;
             this.Description.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Description.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Description.Location = new System.Drawing.Point(53, 0);
             this.Description.Name = "Description";
             this.Description.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
@@ -95,6 +99,7 @@
             this.Controls.Add(this.Title);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Name = "EventUserComponent";
             this.Size = new System.Drawing.Size(500, 48);
             this.VisibleChanged += new System.EventHandler(this.EventUserControl_VisibleChanged);

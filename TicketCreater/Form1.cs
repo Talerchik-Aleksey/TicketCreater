@@ -39,8 +39,8 @@ namespace TicketCreater
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            models.EventSystem.Type = 0;
-            EventSystem.Visible = true;
+            TicketCreating ticketCreating = new TicketCreating();
+            ticketCreating.Show();
         }
 
         private void Form1_Shown(object sender, EventArgs e)

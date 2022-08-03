@@ -39,13 +39,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Toggle3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Toggle2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Toggle1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Footer.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -53,11 +53,11 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Toggle3)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Toggle2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Toggle1)).BeginInit();
             this.SuspendLayout();
             // 
             // Footer
@@ -130,7 +130,6 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Название учебного \nзаведения";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel4
             // 
@@ -162,7 +161,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.Toggle3);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 154);
@@ -170,17 +169,17 @@
             this.panel3.Size = new System.Drawing.Size(718, 77);
             this.panel3.TabIndex = 2;
             // 
-            // pictureBox3
+            // Toggle3
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox3.Image = global::TicketCreater.Properties.Resources.ToggleSwitchOn;
-            this.pictureBox3.Location = new System.Drawing.Point(623, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(95, 77);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.Toggle3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Toggle3.Image = global::TicketCreater.Properties.Resources.ToggleSwitchOn;
+            this.Toggle3.Location = new System.Drawing.Point(623, 0);
+            this.Toggle3.Name = "Toggle3";
+            this.Toggle3.Size = new System.Drawing.Size(95, 77);
+            this.Toggle3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Toggle3.TabIndex = 1;
+            this.Toggle3.TabStop = false;
+            this.Toggle3.Click += new System.EventHandler(this.Toggle3_Click);
             // 
             // label3
             // 
@@ -195,7 +194,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.Toggle2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 77);
@@ -203,17 +202,17 @@
             this.panel2.Size = new System.Drawing.Size(718, 77);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox2
+            // Toggle2
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = global::TicketCreater.Properties.Resources.ToggleSwitchOn;
-            this.pictureBox2.Location = new System.Drawing.Point(623, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(95, 77);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.Toggle2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Toggle2.Image = global::TicketCreater.Properties.Resources.ToggleSwitchOn;
+            this.Toggle2.Location = new System.Drawing.Point(623, 0);
+            this.Toggle2.Name = "Toggle2";
+            this.Toggle2.Size = new System.Drawing.Size(95, 77);
+            this.Toggle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Toggle2.TabIndex = 1;
+            this.Toggle2.TabStop = false;
+            this.Toggle2.Click += new System.EventHandler(this.Toggle3_Click);
             // 
             // label2
             // 
@@ -228,7 +227,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.Toggle1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -236,17 +235,17 @@
             this.panel1.Size = new System.Drawing.Size(718, 77);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // Toggle1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::TicketCreater.Properties.Resources.ToggleSwitchOn;
-            this.pictureBox1.Location = new System.Drawing.Point(623, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.Toggle1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Toggle1.Image = global::TicketCreater.Properties.Resources.ToggleSwitchOn;
+            this.Toggle1.Location = new System.Drawing.Point(623, 0);
+            this.Toggle1.Name = "Toggle1";
+            this.Toggle1.Size = new System.Drawing.Size(95, 77);
+            this.Toggle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Toggle1.TabIndex = 1;
+            this.Toggle1.TabStop = false;
+            this.Toggle1.Click += new System.EventHandler(this.Toggle3_Click);
             // 
             // label1
             // 
@@ -270,6 +269,8 @@
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Настройки";
+            this.Load += new System.EventHandler(this.Settings_Load);
+            this.Shown += new System.EventHandler(this.Settings_Shown);
             this.Resize += new System.EventHandler(this.Settings_Resize);
             this.Footer.ResumeLayout(false);
             this.Footer.PerformLayout();
@@ -281,11 +282,11 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Toggle3)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Toggle2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Toggle1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -302,13 +303,13 @@
         private TextBox textBox1;
         private Label label4;
         private Panel panel3;
-        private PictureBox pictureBox3;
+        private PictureBox Toggle3;
         private Label label3;
         private Panel panel2;
-        private PictureBox pictureBox2;
+        private PictureBox Toggle2;
         private Label label2;
         private Panel panel1;
-        private PictureBox pictureBox1;
+        private PictureBox Toggle1;
         private Label label1;
         private PictureBox pictureBox4;
     }
