@@ -9,9 +9,6 @@ namespace TicketCreater
         private int _currentTicketNumber = 1;
         private string _path = APP_PATH_FOR_TICKETS;
 
-        public bool TicketDesign { get; set; }
-        public string Group { get; set; }
-
         public TicketInput()
         {
             InitializeComponent();
@@ -46,7 +43,7 @@ namespace TicketCreater
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (TicketDesign) TicketParser();
+            if (Settings.TicketDesign) TicketParser();
             else TestWriter();
 
             if (_currentTicketNumber == TicketsInformation.numbers)
@@ -86,12 +83,11 @@ namespace TicketCreater
             using (StreamWriter sw = new(path, true))
             {
                 await sw.WriteLineAsync("Ф 05-422\n".PadLeft(127) +
-                    "Главное управление образования Гродненской областного\n".PadLeft(73) +
+                    $"Главное управление образования {Settings.EducationRegion}\n".PadLeft(73) +
                     "Учреждение образования\n".PadLeft(64) +
-                    "«Гродненский государственный колледж техники, технологий и дизайна»\n".PadLeft(73) +
+                    $"«{Settings.EducateInstitution}»\n".PadLeft(73) +
                     $"ЭКЗАМЕНАЦИОННЫЙ БИЛЕТ №_{_currentTicketNumber}__\n".PadLeft(54) +
-                    "Дисциплина_Иностранный язык(профессиональная лексика)\n");
-                // TODO: Read subject from settings
+                    $"Дисциплина_{Settings.Subject}\n");
             }
         }
 
@@ -101,7 +97,7 @@ namespace TicketCreater
             YearsParser.ParseYears();
             using (StreamWriter sw = new(path, true))
             {
-                await sw.WriteLineAsync($"Группа_{Group}___Экзаменационная сессия {StartEndYears.StartYear}_/{StartEndYears.EndYear} учебного года\n" +
+                await sw.WriteLineAsync($"Группа_{Settings.Group}___Экзаменационная сессия {StartEndYears.StartYear}_/{StartEndYears.EndYear} учебного года\n" +
                                          "                                         зимняя/летняя\n");
                 var lines = richTextBox1.Text.Split('\n');
                 foreach (string line in lines)

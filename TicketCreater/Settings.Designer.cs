@@ -1,6 +1,6 @@
 ﻿namespace TicketCreater
 {
-    partial class Settings
+    partial class SettingsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,26 +31,18 @@
             this.Footer = new System.Windows.Forms.Panel();
             this.EventSystem = new TicketCreater.EventUserComponent();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.EducationRegionComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.EducateInstitutionTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.Footer.SuspendLayout();
             this.MainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Footer
@@ -75,15 +67,48 @@
             // 
             // MainPanel
             // 
-            this.MainPanel.Controls.Add(this.panel2);
             this.MainPanel.Controls.Add(this.panel1);
             this.MainPanel.Controls.Add(this.pictureBox4);
-            this.MainPanel.Controls.Add(this.panel5);
             this.MainPanel.Controls.Add(this.panel4);
             this.MainPanel.Location = new System.Drawing.Point(205, 170);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(718, 399);
             this.MainPanel.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.EducationRegionComboBox);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 77);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(718, 77);
+            this.panel1.TabIndex = 6;
+            // 
+            // EducationRegionComboBox
+            // 
+            this.EducationRegionComboBox.FormattingEnabled = true;
+            this.EducationRegionComboBox.Items.AddRange(new object[] {
+            "Гродненской области",
+            "Минской области",
+            "Гомельской области",
+            "Витебской области",
+            "Брестской области "});
+            this.EducationRegionComboBox.Location = new System.Drawing.Point(623, 32);
+            this.EducationRegionComboBox.Name = "EducationRegionComboBox";
+            this.EducationRegionComboBox.Size = new System.Drawing.Size(92, 23);
+            this.EducationRegionComboBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(380, 77);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Главное управление образования";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox4
             // 
@@ -96,37 +121,9 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 77);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(718, 77);
-            this.panel5.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(623, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(92, 23);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(380, 77);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Название учебного \nзаведения";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.EducateInstitutionTextBox);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -134,12 +131,12 @@
             this.panel4.Size = new System.Drawing.Size(718, 77);
             this.panel4.TabIndex = 3;
             // 
-            // textBox1
+            // EducateInstitutionTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(623, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 23);
-            this.textBox1.TabIndex = 1;
+            this.EducateInstitutionTextBox.Location = new System.Drawing.Point(623, 32);
+            this.EducateInstitutionTextBox.Name = "EducateInstitutionTextBox";
+            this.EducateInstitutionTextBox.Size = new System.Drawing.Size(92, 23);
+            this.EducateInstitutionTextBox.TabIndex = 1;
             // 
             // label4
             // 
@@ -149,66 +146,10 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(380, 77);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Текст для подстановки в \nполе дисциплина ";
+            this.label4.Text = "Название учебного заведения";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 154);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(718, 77);
-            this.panel1.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(623, 32);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(92, 23);
-            this.textBox3.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 77);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Название учебного \nзаведения";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 231);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(718, 77);
-            this.panel2.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(623, 32);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(92, 23);
-            this.textBox4.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(380, 77);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Название учебного \nзаведения";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Settings
+            // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,23 +157,19 @@
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.Footer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Settings";
+            this.Name = "SettingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Настройки";
+            this.Shown += new System.EventHandler(this.SettingsForm_Shown);
             this.Resize += new System.EventHandler(this.Settings_Resize);
             this.Footer.ResumeLayout(false);
             this.Footer.PerformLayout();
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -242,18 +179,12 @@
         private Panel Footer;
         private EventUserComponent EventSystem;
         private Panel MainPanel;
-        private Panel panel5;
-        private TextBox textBox2;
-        private Label label5;
         private Panel panel4;
-        private TextBox textBox1;
+        private TextBox EducateInstitutionTextBox;
         private Label label4;
         private PictureBox pictureBox4;
-        private Panel panel2;
-        private TextBox textBox4;
-        private Label label2;
         private Panel panel1;
-        private TextBox textBox3;
+        private ComboBox EducationRegionComboBox;
         private Label label1;
     }
 }

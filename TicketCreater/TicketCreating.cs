@@ -36,17 +36,26 @@ namespace TicketCreater
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Settings settings = new();
+            SettingsForm settings = new();
             settings.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            LoadSettings();
             TicketsInformation.numbers = (int)numericUpDown1.Value;
             this.Close();
             TicketInput ticketInput = new();
-            ticketInput.TicketDesign = ticketDesign;
+
             ticketInput.Show();
+        }
+
+        private void LoadSettings()
+        {
+            Settings.TicketDesign = ticketDesign;
+            Settings.Group = Group.Text;
+            Settings.Subject = Subject.Text;
+            Settings.ReadSettingsFromIniFile();
         }
 
         private void TicketCreating_Load(object sender, EventArgs e)

@@ -10,7 +10,7 @@
             if (dateTime.Month < 9)
             {
                 StartEndYears.StartYear = dateTime.AddYears(-1).Year;
-                StartEndYears.EndYear = dateTime.ye;
+                StartEndYears.EndYear = dateTime.Year;
             }
         }
     }
