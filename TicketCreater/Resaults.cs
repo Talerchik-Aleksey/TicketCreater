@@ -76,7 +76,6 @@ namespace TicketCreater
             SaveFileDialog saveFileDialog = new();
             saveFileDialog.Filter = "Text File|*.txt|Word File|*.doc";
             saveFileDialog.Title = "Save your tickets";
-            saveFileDialog.ShowDialog();
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {

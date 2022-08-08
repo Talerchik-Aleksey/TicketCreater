@@ -15,6 +15,7 @@ namespace TicketCreater
     {
         private const string V = "Введите вопросы для билета под номером ";
         private const string APP_PATH_FOR_TICKETS = "../../tickets.txt";
+        private const string Caption = "Cформированно";
         private int currentTicketNumber = 1;
         private string path = APP_PATH_FOR_TICKETS;
 
@@ -108,6 +109,8 @@ namespace TicketCreater
             }
             currentTicketNumber++;
             Description.Text = V + currentTicketNumber;
+            string text = $"Билет под номером {currentTicketNumber - 1}, сформированн";
+            EventSystem.SuccessEvent(Caption, text);
         }
     }
 }
