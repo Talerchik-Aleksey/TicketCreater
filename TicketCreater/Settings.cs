@@ -1,15 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using MyProg;
 using TicketCreater.models;
-using TicketCreater.Properties;
 
 namespace TicketCreater
 {
-    public partial class Settings : Form
+    public partial class SettingsForm : Form
     {
-
         private List<ToggleState> settingsStates;
 
-        public Settings()
+        public SettingsForm()
         {
             InitializeComponent();
             TitleBar titleBar = new TitleBar()
@@ -31,63 +29,39 @@ namespace TicketCreater
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
-            // TODO: SAVE SETTINGS SYSTEM
+            SaveSettings();
 
             this.Close();
         }
 
 
-        // TODO: Delete this
-        private void ChangeState(PictureBox sender)
+        private void SaveSettings()
         {
-            if (sender == null)
-            {
-                models.EventSystem.Type = 0;
-                models.EventSystem.Name = "Ошибка";
-                models.EventSystem.Description = "Что-то пошло не так!";
-                EventSystem.Visible = true;
-                return;
-            }
-
-            if (sender.Equals(Toggle1))
-            {
-                settingsStates[0].IsChecked = !settingsStates[0].IsChecked;
-                Toggle1.Image = settingsStates[0].IsChecked ? Resources.ToggleSwitchOn : Resources.ToggleSwitchOff;
-            }
-            else if (sender.Equals(Toggle2))
-            {
-                settingsStates[1].IsChecked = !settingsStates[1].IsChecked;
-                Toggle2.Image = settingsStates[1].IsChecked ? Resources.ToggleSwitchOn : Resources.ToggleSwitchOff;
-            }
-            else
-            {
-                settingsStates[2].IsChecked = !settingsStates[2].IsChecked;
-                Toggle3.Image = settingsStates[2].IsChecked ? Resources.ToggleSwitchOn : Resources.ToggleSwitchOff;
-            }
+            WriteSettings();
+            Settings.ReadSettingsFromIniFile();
         }
 
-        private void Settings_Load(object sender, EventArgs e)
+        private void WriteSettings()
         {
-            // TODO: Read from file
-            settingsStates = new()
+            try
             {
-                new ToggleState() { IsChecked = true },
-                new ToggleState() { IsChecked = true },
-                new ToggleState() { IsChecked = true },
-            };
+                IniFile MyIni = new(Settings.IniPath);                
+                MyIni.Write("EducateInstitution", EducateInstitutionTextBox.Text);
+                MyIni.Write("EducationRegion", EducationRegionComboBox.Text);
+            }
+            catch (Exception ex)
+            {
+                EventSystem.CriticalEvent("Ошибка", "Ошибка при записи настроек");
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
-        private void Settings_Shown(object sender, EventArgs e)
+        private void SettingsForm_Shown(object sender, EventArgs e)
         {
-            Toggle1.Image = settingsStates[0].IsChecked ? Resources.ToggleSwitchOn : Resources.ToggleSwitchOff;
-            Toggle2.Image = settingsStates[1].IsChecked ? Resources.ToggleSwitchOn : Resources.ToggleSwitchOff;
-            Toggle3.Image = settingsStates[2].IsChecked ? Resources.ToggleSwitchOn : Resources.ToggleSwitchOff;
-        }
-
-        private void Toggle3_Click(object sender, EventArgs e)
-        {
-            ChangeState((PictureBox)sender);
+            Settings.ReadSettingsFromIniFile();
+            EducateInstitutionTextBox.Text = Settings.EducateInstitution;
+            EducationRegionComboBox.Text = Settings.EducationRegion;
         }
     }
 }

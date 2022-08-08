@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace TicketCreater
+﻿namespace TicketCreater
 {
     public partial class HelpForm2 : Form
     {
@@ -50,7 +40,8 @@ namespace TicketCreater
         private void Dot1_Click(object sender, EventArgs e)
         {
             int formWindowState = (int)this.WindowState;
-            if (sender.Equals(Dot1)) {
+            if (sender.Equals(Dot1))
+            {
                 this.Close();
                 HelpForm helpForm = new();
                 helpForm.Show();

@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TicketCreater.models;
+﻿using TicketCreater.models;
 
 namespace TicketCreater
 {
@@ -18,7 +9,7 @@ namespace TicketCreater
         public Resaults()
         {
             InitializeComponent();
-            
+
             TitleBar titleBar = new TitleBar()
             {
                 Dock = DockStyle.Top,
@@ -27,6 +18,7 @@ namespace TicketCreater
             this.Controls.Add(titleBar);
 
             FormLabel();
+
             EventSystem.Location = new Point((this.ClientSize.Width - EventSystem.Size.Width) / 2, EventSystem.Location.Y);
             MainPanel.Location = new Point((this.ClientSize.Width - MainPanel.Size.Width) / 2, MainPanel.Location.Y);
         }
@@ -34,7 +26,6 @@ namespace TicketCreater
         private void FormLabel()
         {
             int numberOfTickets = TicketsInformation.numbers;
-            MessageBox.Show($"{numberOfTickets}");
             string labelString = $"Сформированно: {numberOfTickets} {GetTicketWord(numberOfTickets)}";
             Description.Text = labelString;
         }
@@ -82,7 +73,7 @@ namespace TicketCreater
                 string path = saveFileDialog.FileName;
                 if (path != "")
                 {
-                    File.Copy(SourceFileName, path);
+                    File.Copy(SourceFileName, path, true);
                     this.Close();
                 }
             }

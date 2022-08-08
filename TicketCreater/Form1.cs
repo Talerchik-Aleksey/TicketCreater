@@ -1,5 +1,3 @@
-using TicketCreater.models;
-
 namespace TicketCreater
 {
     public partial class Form1 : Form
@@ -23,7 +21,7 @@ namespace TicketCreater
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Settings settings = new Settings();
+            SettingsForm settings = new SettingsForm();
             settings.Show();
         }
 
