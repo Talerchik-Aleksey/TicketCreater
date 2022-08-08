@@ -1,5 +1,3 @@
-using TicketCreater.models;
-
 namespace TicketCreater
 {
     public partial class Form1 : Form

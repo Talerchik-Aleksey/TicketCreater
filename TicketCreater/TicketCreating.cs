@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TicketCreater.models;
+﻿using TicketCreater.models;
+using TicketCreater.Properties;
 
 namespace TicketCreater
 {
     public partial class TicketCreating : Form
     {
+        ToggleState toggleState = null;
+        bool ticketDesign = true;
+
         public TicketCreating()
         {
             InitializeComponent();
@@ -50,8 +45,20 @@ namespace TicketCreater
             TicketsInformation.numbers = (int)numericUpDown1.Value;
             this.Close();
             TicketInput ticketInput = new();
+            ticketInput.TicketDesign = ticketDesign;
             ticketInput.Show();
+        }
 
+        private void TicketCreating_Load(object sender, EventArgs e)
+        {
+            toggleState = new ToggleState() { IsChecked = true };
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            toggleState.IsChecked = !toggleState.IsChecked;
+            Toggle.Image = toggleState.IsChecked ? Resources.ToggleSwitchOn : Resources.ToggleSwitchOff;
+            ticketDesign = !ticketDesign;
         }
     }
 }
