@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TicketCreater.models;
 
 namespace TicketCreater
 {
@@ -46,21 +47,11 @@ namespace TicketCreater
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            TicketsInformation.numbers = (int)numericUpDown1.Value;
+            this.Close();
+            TicketInput ticketInput = new();
+            ticketInput.Show();
 
-            TicketParser();
-
-        }
-
-        private async void TicketParser()
-        {
-            var path = "../../tickets.txt";
-            using (StreamWriter sw = new(path, false))
-            {
-                await sw.WriteLineAsync("Ф 05-422\n".PadLeft(127) +
-                    "Главное управление образования Гродненской областного\n".PadLeft(73) +
-                    "Учреждение образования\n".PadLeft(64) +
-                    "«Гродненский государственный колледж техники, технологий и дизайна»".PadLeft(72));
-            }
         }
     }
 }
