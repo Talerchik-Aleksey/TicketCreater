@@ -1,3 +1,7 @@
+using TicketCreater.Properties;
+
+using TicketCreater.models;
+
 namespace TicketCreater
 {
     public partial class Form1 : Form
@@ -55,6 +59,61 @@ namespace TicketCreater
         {
             HelpForm helpForm = new HelpForm();
             helpForm.Show();
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            var pictureBox = (PictureBox)sender;
+            if (sender.Equals(pictureBox1))
+            {
+                pictureBox.Image = Resources.HButton;
+            } else if (sender.Equals(pictureBox2))
+            {
+                pictureBox.Image = Resources.HButton_1;
+            } else { pictureBox.Image = Resources.HButton_2; }
+            
+        }
+
+        private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
+        {
+            var pictureBox = (PictureBox)sender;
+            if (sender.Equals(pictureBox1))
+            {
+                pictureBox.Image = Resources.HButton;
+            }
+            else if (sender.Equals(pictureBox2))
+            {
+                pictureBox.Image = Resources.HButton_1;
+            }
+            else { pictureBox.Image = Resources.HButton_2; }
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Resources.Button;
+            pictureBox2.Image = Resources.Button_1;
+            pictureBox3.Image = Resources.Button_2;
+        }
+
+        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
+        {
+            var pictureBox = (PictureBox)sender;
+            if (sender.Equals(pictureBox1))
+            {
+                pictureBox.Image = Resources.PButton;
+            }
+            else if (sender.Equals(pictureBox2))
+            {
+                pictureBox.Image = Resources.PButton_1;
+            }
+            else { pictureBox.Image = Resources.PButton_2; }
+        }
+
+        private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox1.Image = Resources.Button;
+            pictureBox2.Image = Resources.Button_1;
+            pictureBox3.Image = Resources.Button_2;
         }
     }
 }

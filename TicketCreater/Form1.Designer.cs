@@ -54,6 +54,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.MainMenuPanel);
             this.panel1.Controls.Add(this.Footer);
@@ -88,6 +89,11 @@
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            this.pictureBox3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseUp);
             // 
             // pictureBox2
             // 
@@ -101,6 +107,11 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseUp);
             // 
             // pictureBox1
             // 
@@ -114,6 +125,11 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseUp);
             // 
             // Footer
             // 
@@ -142,6 +158,7 @@
             // 
             this.EventSystem.AutoSize = true;
             this.EventSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.EventSystem.ForeColor = System.Drawing.SystemColors.WindowText;
             this.EventSystem.Location = new System.Drawing.Point(363, 13);
             this.EventSystem.Name = "EventSystem";
             this.EventSystem.Size = new System.Drawing.Size(640, 48);
@@ -155,7 +172,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 96F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(395, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(576, 340);
+            this.label1.Size = new System.Drawing.Size(614, 340);
             this.label1.TabIndex = 1;
             this.label1.Text = "TICKETS\r\nCREATER\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -226,6 +243,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -1,4 +1,5 @@
 ﻿using TicketCreater.models;
+using TicketCreater.Properties;
 
 namespace TicketCreater
 {
@@ -54,7 +55,8 @@ namespace TicketCreater
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            MsBox msBox = new("Вы действительно хотите выйти?", "После закрытия окна вы не сможете восстановить введённые вами данные");
+            if (msBox.ShowDialog() == DialogResult.Cancel) { this.Close(); }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -77,6 +79,44 @@ namespace TicketCreater
                     this.Close();
                 }
             }
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            var pictureBox = (PictureBox)sender;
+            if (sender.Equals(pictureBox4))
+            {
+                pictureBox.Image = Resources.PSaveButton;
+            }
+            else if (sender.Equals(pictureBox1))
+            {
+                pictureBox.Image = Resources.PButtonClose;
+            }
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            var pictureBox = (PictureBox)sender;
+            if (sender.Equals(pictureBox4))
+            {
+                pictureBox.Image = Resources.HSaveButton;
+            }
+            else if (sender.Equals(pictureBox1))
+            {
+                pictureBox.Image = Resources.HButtonClose;
+            }
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Resources.SaveButton;
+            pictureBox1.Image = Resources.ButtonClose;
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox4.Image = Resources.SaveButton;
+            pictureBox1.Image = Resources.ButtonClose;
         }
     }
 }

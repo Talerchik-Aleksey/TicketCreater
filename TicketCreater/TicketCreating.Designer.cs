@@ -81,9 +81,9 @@
             // numericUpDown1
             // 
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Location = new System.Drawing.Point(623, 33);
+            this.numericUpDown1.Location = new System.Drawing.Point(536, 33);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(92, 23);
+            this.numericUpDown1.Size = new System.Drawing.Size(179, 23);
             this.numericUpDown1.TabIndex = 2;
             this.numericUpDown1.Value = new decimal(new int[] {
             25,
@@ -101,6 +101,10 @@
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
+            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
+            this.pictureBox4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseUp);
             // 
             // MainPanel
             // 
@@ -110,7 +114,7 @@
             this.MainPanel.Controls.Add(this.pictureBox1);
             this.MainPanel.Controls.Add(this.pictureBox4);
             this.MainPanel.Controls.Add(this.panel4);
-            this.MainPanel.Location = new System.Drawing.Point(185, 46);
+            this.MainPanel.Location = new System.Drawing.Point(314, 105);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(718, 495);
             this.MainPanel.TabIndex = 15;
@@ -127,9 +131,9 @@
             // 
             // Subject
             // 
-            this.Subject.Location = new System.Drawing.Point(623, 32);
+            this.Subject.Location = new System.Drawing.Point(536, 32);
             this.Subject.Name = "Subject";
-            this.Subject.Size = new System.Drawing.Size(92, 23);
+            this.Subject.Size = new System.Drawing.Size(179, 23);
             this.Subject.TabIndex = 1;
             // 
             // label3
@@ -155,9 +159,9 @@
             // 
             // Group
             // 
-            this.Group.Location = new System.Drawing.Point(623, 32);
+            this.Group.Location = new System.Drawing.Point(536, 32);
             this.Group.Name = "Group";
-            this.Group.Size = new System.Drawing.Size(92, 23);
+            this.Group.Size = new System.Drawing.Size(179, 23);
             this.Group.TabIndex = 1;
             // 
             // label2
@@ -183,11 +187,12 @@
             // 
             // Toggle
             // 
+            this.Toggle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Toggle.Dock = System.Windows.Forms.DockStyle.Right;
             this.Toggle.Image = global::TicketCreater.Properties.Resources.ToggleSwitchOn;
-            this.Toggle.Location = new System.Drawing.Point(618, 0);
+            this.Toggle.Location = new System.Drawing.Point(536, 0);
             this.Toggle.Name = "Toggle";
-            this.Toggle.Size = new System.Drawing.Size(100, 77);
+            this.Toggle.Size = new System.Drawing.Size(182, 77);
             this.Toggle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Toggle.TabIndex = 1;
             this.Toggle.TabStop = false;
@@ -214,6 +219,10 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseUp);
             // 
             // EventSystem
             // 
@@ -230,22 +239,23 @@
             // 
             this.Footer.Controls.Add(this.EventSystem);
             this.Footer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Footer.Location = new System.Drawing.Point(0, 568);
+            this.Footer.Location = new System.Drawing.Point(0, 695);
             this.Footer.Name = "Footer";
-            this.Footer.Size = new System.Drawing.Size(1079, 73);
+            this.Footer.Size = new System.Drawing.Size(1366, 73);
             this.Footer.TabIndex = 14;
             // 
             // TicketCreating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 641);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.Footer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TicketCreating";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TicketCreating";
+            this.Text = "Данные для формирования";
             this.Load += new System.EventHandler(this.TicketCreating_Load);
             this.Shown += new System.EventHandler(this.TicketCreating_Shown);
             this.Resize += new System.EventHandler(this.TicketCreating_Resize);

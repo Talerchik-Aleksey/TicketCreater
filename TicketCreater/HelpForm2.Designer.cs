@@ -63,6 +63,7 @@
             // 
             this.EventSystem.AutoSize = true;
             this.EventSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.EventSystem.ForeColor = System.Drawing.SystemColors.WindowText;
             this.EventSystem.Location = new System.Drawing.Point(180, 13);
             this.EventSystem.Name = "EventSystem";
             this.EventSystem.Size = new System.Drawing.Size(640, 48);
@@ -129,6 +130,10 @@
             this.NextButton.TabIndex = 0;
             this.NextButton.TabStop = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            this.NextButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NextButton_MouseDown);
+            this.NextButton.MouseEnter += new System.EventHandler(this.NextButton_MouseEnter);
+            this.NextButton.MouseLeave += new System.EventHandler(this.NextButton_MouseLeave);
+            this.NextButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NextButton_MouseUp);
             // 
             // label1
             // 

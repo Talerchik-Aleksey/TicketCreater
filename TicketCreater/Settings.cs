@@ -63,5 +63,25 @@ namespace TicketCreater
             EducateInstitutionTextBox.Text = Settings.EducateInstitution;
             EducationRegionComboBox.Text = Settings.EducationRegion;
         }
+
+        private void SaveButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            SaveButton.Image = Resources.PSaveButton;
+        }
+
+        private void SaveButton_MouseEnter(object sender, EventArgs e)
+        {
+            SaveButton.Image = Resources.HSaveButton;
+        }
+
+        private void SaveButton_MouseLeave(object sender, EventArgs e)
+        {
+            SaveButton.Image = Resources.SaveButton;
+        }
+
+        private void SaveButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            SaveButton.Image = Resources.SaveButton;
+        }
     }
 }

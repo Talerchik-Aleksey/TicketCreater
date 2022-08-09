@@ -34,14 +34,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.EducationRegionComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.SaveButton = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EducateInstitutionTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Footer.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveButton)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +68,7 @@
             // MainPanel
             // 
             this.MainPanel.Controls.Add(this.panel1);
-            this.MainPanel.Controls.Add(this.pictureBox4);
+            this.MainPanel.Controls.Add(this.SaveButton);
             this.MainPanel.Controls.Add(this.panel4);
             this.MainPanel.Location = new System.Drawing.Point(205, 170);
             this.MainPanel.Name = "MainPanel";
@@ -94,9 +94,9 @@
             "Гомельской области",
             "Витебской области",
             "Брестской области "});
-            this.EducationRegionComboBox.Location = new System.Drawing.Point(623, 32);
+            this.EducationRegionComboBox.Location = new System.Drawing.Point(476, 32);
             this.EducationRegionComboBox.Name = "EducationRegionComboBox";
-            this.EducationRegionComboBox.Size = new System.Drawing.Size(92, 23);
+            this.EducationRegionComboBox.Size = new System.Drawing.Size(239, 23);
             this.EducationRegionComboBox.TabIndex = 1;
             // 
             // label1
@@ -110,16 +110,21 @@
             this.label1.Text = "Главное управление образования";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox4
+            // SaveButton
             // 
-            this.pictureBox4.Image = global::TicketCreater.Properties.Resources.SaveButton;
-            this.pictureBox4.Location = new System.Drawing.Point(215, 328);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(280, 53);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveButton.Image = global::TicketCreater.Properties.Resources.SaveButton;
+            this.SaveButton.Location = new System.Drawing.Point(215, 328);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(280, 53);
+            this.SaveButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.SaveButton.TabIndex = 5;
+            this.SaveButton.TabStop = false;
+            this.SaveButton.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.SaveButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SaveButton_MouseDown);
+            this.SaveButton.MouseEnter += new System.EventHandler(this.SaveButton_MouseEnter);
+            this.SaveButton.MouseLeave += new System.EventHandler(this.SaveButton_MouseLeave);
+            this.SaveButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SaveButton_MouseUp);
             // 
             // panel4
             // 
@@ -133,9 +138,9 @@
             // 
             // EducateInstitutionTextBox
             // 
-            this.EducateInstitutionTextBox.Location = new System.Drawing.Point(623, 32);
+            this.EducateInstitutionTextBox.Location = new System.Drawing.Point(476, 32);
             this.EducateInstitutionTextBox.Name = "EducateInstitutionTextBox";
-            this.EducateInstitutionTextBox.Size = new System.Drawing.Size(92, 23);
+            this.EducateInstitutionTextBox.Size = new System.Drawing.Size(239, 23);
             this.EducateInstitutionTextBox.TabIndex = 1;
             // 
             // label4
@@ -167,7 +172,7 @@
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaveButton)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -182,7 +187,7 @@
         private Panel panel4;
         private TextBox EducateInstitutionTextBox;
         private Label label4;
-        private PictureBox pictureBox4;
+        private PictureBox SaveButton;
         private Panel panel1;
         private ComboBox EducationRegionComboBox;
         private Label label1;

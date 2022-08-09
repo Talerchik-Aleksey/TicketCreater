@@ -35,7 +35,6 @@ namespace TicketCreater
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
             SettingsForm settings = new();
             settings.Show();
         }
@@ -58,6 +57,14 @@ namespace TicketCreater
             Settings.ReadSettingsFromIniFile();
         }
 
+        private async void TicketParser()
+        {
+            Settings.TicketDesign = ticketDesign;
+            Settings.Group = Group.Text;
+            Settings.Subject = Subject.Text;
+            Settings.ReadSettingsFromIniFile();
+        }
+
         private void TicketCreating_Load(object sender, EventArgs e)
         {
             toggleState = new ToggleState() { IsChecked = true };
@@ -68,6 +75,56 @@ namespace TicketCreater
             toggleState.IsChecked = !toggleState.IsChecked;
             Toggle.Image = toggleState.IsChecked ? Resources.ToggleSwitchOn : Resources.ToggleSwitchOff;
             ticketDesign = !ticketDesign;
+
+            if (!toggleState.IsChecked)
+            {
+                panel2.Visible = false;
+                panel3.Visible = false;
+            }
+            else
+            {
+                panel2.Visible = true;
+                panel3.Visible = true;
+            }
+        }
+
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        {
+            var pictureBox = (PictureBox)sender;
+            if (sender.Equals(pictureBox4))
+            {
+                pictureBox.Image = Resources.PButton;
+            }
+            else if (sender.Equals(pictureBox1))
+            {
+                pictureBox.Image = Resources.PButton_1;
+            }
+        }
+
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            var pictureBox = (PictureBox)sender;
+            if (sender.Equals(pictureBox4))
+            {
+                pictureBox.Image = Resources.HButton;
+            }
+            else if (sender.Equals(pictureBox1))
+            {
+                pictureBox.Image = Resources.HButton_1;
+            }
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Resources.Button;
+            pictureBox1.Image = Resources.Button_1;
+
+        }
+
+        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox4.Image = Resources.Button;
+            pictureBox1.Image = Resources.Button_1;
         }
     }
 }

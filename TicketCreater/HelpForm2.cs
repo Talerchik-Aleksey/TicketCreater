@@ -1,4 +1,6 @@
-﻿namespace TicketCreater
+﻿using TicketCreater.Properties;
+
+namespace TicketCreater
 {
     public partial class HelpForm2 : Form
     {
@@ -66,6 +68,27 @@
             HelpForm3 helpForm3 = new();
             helpForm3.Show();
             helpForm3.WindowState = (FormWindowState)formWindowState;
+        }
+
+        private void NextButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            NextButton.Image = Resources.PNextButton;
+        }
+
+        private void NextButton_MouseEnter(object sender, EventArgs e)
+        {
+            NextButton.Image = Resources.HButtonNext;
+
+        }
+
+        private void NextButton_MouseLeave(object sender, EventArgs e)
+        {
+            NextButton.Image = Resources.ButtonNext;
+        }
+
+        private void NextButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            NextButton.Image = Resources.ButtonNext;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using TicketCreater.models;
+using TicketCreater.Properties;
 
 namespace TicketCreater
 {
@@ -34,11 +35,13 @@ namespace TicketCreater
         {
             EventSystem.Location = new Point((this.ClientSize.Width - EventSystem.Size.Width) / 2, EventSystem.Location.Y);
             MainPanel.Location = new Point((this.ClientSize.Width - MainPanel.Size.Width) / 2, MainPanel.Location.Y);
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            MsBox msBox = new MsBox("Вы действительно хотите выйти?", "После закрытия окна вы не сможете восстановить введённые вами данные");
+            if (msBox.ShowDialog() == DialogResult.Cancel) { this.Close(); return; }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -56,6 +59,8 @@ namespace TicketCreater
             EventSystem.SuccessEvent("Успешно", $"Билет {_currentTicketNumber} успешно сформированн");
             _currentTicketNumber++;
             Description.Text = V + _currentTicketNumber;
+
+            richTextBox1.Clear();
         }
 
         private async void TestWriter()
@@ -117,6 +122,44 @@ namespace TicketCreater
                     "                             подпись                                                                        подпись" +
                     "                                                        ______________");
             }
+        }
+
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        {
+            var pictureBox = (PictureBox)sender;
+            if (sender.Equals(pictureBox4))
+            {
+                pictureBox.Image = Resources.PNextButton;
+            }
+            else if (sender.Equals(pictureBox1))
+            {
+                pictureBox.Image = Resources.PButtonClose;
+            }
+        }
+
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            var pictureBox = (PictureBox)sender;
+            if (sender.Equals(pictureBox4))
+            {
+                pictureBox.Image = Resources.HButtonNext;
+            }
+            else if (sender.Equals(pictureBox1))
+            {
+                pictureBox.Image = Resources.HButtonClose;
+            }
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Resources.ButtonClose;
+            pictureBox4.Image = Resources.ButtonNext;
+        }
+
+        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox1.Image = Resources.ButtonClose;
+            pictureBox4.Image = Resources.ButtonNext;
         }
     }
 }

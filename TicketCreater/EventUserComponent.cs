@@ -81,5 +81,15 @@ namespace TicketCreater
             this.Visible = true;
             this.UpdateStyles();
         }
+
+        public void WarningEvent(string caption, string text)
+        {
+            this.Visible = false;
+            models.EventSystem.Type = 1;
+            models.EventSystem.Name = caption;
+            models.EventSystem.Description = text;
+            this.Visible = true;
+            this.UpdateStyles();
+        }
     }
 }

@@ -113,7 +113,7 @@ namespace TicketCreater
                 HelpForm2 helpForm2 = new();
                 helpForm2.Show();
             }
-            else { ChromeBackError(CurrentForm); }
+            else { CurrentForm.Close(); }
         }
 
         /// <summary>

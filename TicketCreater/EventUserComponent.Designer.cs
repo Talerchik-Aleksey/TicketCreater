@@ -53,7 +53,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = global::TicketCreater.Properties.Resources.InformationIcon;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
